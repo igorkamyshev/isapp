@@ -13,7 +13,7 @@
     "build": "rimraf ./dist && yarn prestart:back:prod && yarn prestart:front:prod",
     "lint:code": "tslint {front,back,shared}/**/*.ts{,x} -c tslint.json",
     "lint:style": "stylelint --config front/.stylelintrc 'front/**/*.css' --fix",
-    "lint": "yarn lint:code",
+    "lint": "yarn lint:code && yarn lint:styles",
     "types": "tcm front && tsc --noEmit -p front && tsc --noEmit -p back",
     "pretty": "prettier --write \"{back,front,shared}/**/*.{ts,tsx,js}\""
   },
