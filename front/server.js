@@ -12,5 +12,7 @@ const app = next({ dev, dir: './front' })
 const handler = routes.getRequestHandler(app)
 
 app.prepare().then(() => {
-  express().use(handler).listen(PORT)
+  express()
+    .use(handler)
+    .listen(PORT)
 })
