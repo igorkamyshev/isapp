@@ -36,6 +36,6 @@
   },
   "rulesDirectory": ["node_modules/tslint-eslint-rules/dist/rules"],
   "linterOptions": {
-    "exclude": ["**/*.js", "node_modules/**/*"]
+    "exclude": ["**/*.js", "node_modules/**/*", "**/*.css.d.ts"]
   }
 }
