@@ -12,10 +12,10 @@
     "start:front:prod": "pm2 start ./front/pm2.json",
     "build": "rimraf ./dist && yarn prestart:back:prod && yarn prestart:front:prod",
     "lint:code": "tslint {front,back,shared}/**/*.ts{,x} -c tslint.json",
-    "lint:style": "stylelint --config front/.stylelintrc 'front/**/*.css' --fix",
+    "lint:style": "stylelint --config front/.stylelintrc './front/**/*.css' --fix",
     "lint": "yarn lint:code && yarn lint:style",
     "types": "tcm front && tsc --noEmit -p front && tsc --noEmit -p back",
-    "pretty": "prettier --write \"{back,front,shared}/**/*.{ts,tsx,js,css}\""
+    "pretty": "prettier --write \"{.,,!(dist|node_modules)/**}/*.{ts,tsx,js,css,json}\""
   },
   "dependencies": {
     "@nestjs/common": "^5.5.0",
@@ -70,9 +70,11 @@
     }
   },
   "lint-staged": {
-    "*.{js,ts,tsx,css}": [
+    "*.{ts,tsx,css}": [
+      "yarn lint"
+    ],
+    "*.{js,ts,tsx,css,json}": [
       "yarn pretty",
-      "yarn lint",
       "git add"
     ]
   },

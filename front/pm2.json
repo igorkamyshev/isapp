@@ -2,7 +2,7 @@
   "name": "isapp-web",
   "script": "front/server.js",
   "instances": "max",
-  "env_production" : {
+  "env_production": {
     "NODE_ENV": "production"
   }
 }

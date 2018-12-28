@@ -13,16 +13,10 @@
     "outDir": "../dist/back",
     "baseUrl": ".",
     "paths": {
-      "@back/*": [ "./src/*" ],
+      "@back/*": ["./src/*"],
       "@shared/*": ["./../shared/*"]
     }
   },
-  "include": [
-    "src/**/*",
-    "../shared/**/*"
-  ],
-  "exclude": [
-    "node_modules",
-    "**/*.spec.ts"
-  ]
+  "include": ["src/**/*", "../shared/**/*"],
+  "exclude": ["node_modules", "**/*.spec.ts"]
 }
