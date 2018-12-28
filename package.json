@@ -15,7 +15,7 @@
     "lint:style": "stylelint --config front/.stylelintrc 'front/**/*.css' --fix",
     "lint": "yarn lint:code && yarn lint:style",
     "types": "tcm front && tsc --noEmit -p front && tsc --noEmit -p back",
-    "pretty": "prettier --write \"{back,front,shared}/**/*.{ts,tsx,js}\""
+    "pretty": "prettier --write \"{back,front,shared}/**/*.{ts,tsx,js,css}\""
   },
   "dependencies": {
     "@nestjs/common": "^5.5.0",
@@ -70,7 +70,7 @@
     }
   },
   "lint-staged": {
-    "*.{js,ts,tsx}": [
+    "*.{js,ts,tsx,css}": [
       "yarn pretty",
       "yarn lint",
       "git add"
