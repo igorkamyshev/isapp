@@ -31,6 +31,7 @@
     "stylelint-config-recess-order": "^2.0.1",
     "stylelint-config-recommended": "^2.1.0",
     "stylelint-order": "^2.0.0",
+    "stylelint-value-no-exposed-custom-properties": "^2.2.0",
     "typed-css-modules": "^0.3.7",
     "typescript-plugin-css-modules": "^1.0.5"
   }
