@@ -14,10 +14,10 @@
     "s": "yarn soda"
   },
   "dependencies": {
-    "@solid-soda/scripts": "^1.7.1",
     "tsconfig-paths": "^3.7.0"
   },
   "devDependencies": {
+    "@solid-soda/scripts": "^1.7.1",
     "pm2": "^3.2.4",
     "rimraf": "^2.6.2",
     "ts-node": "^7.0.1",
