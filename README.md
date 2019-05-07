@@ -1,1 +1,1 @@
-`npm i -g commitizen`
+# isapp

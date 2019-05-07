@@ -5,7 +5,9 @@ import con from '@shared/module'
 
 import s from './index.css'
 
-export default () => {
+const Index = () => {
   con()
   return <p className={s.title}>{log()}</p>
 }
+
+export default Index

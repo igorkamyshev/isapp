@@ -2,11 +2,16 @@ const withPlugins = require('next-compose-plugins')
 const withCSS = require('next-css-unpluggable')
 const withTypescript = require('@zeit/next-typescript')
 
-const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
+const tsIncludes = require('./.workarounds/ts-includes')
 
 module.exports = withPlugins(
   [
-    [withTypescript],
+    [
+      withTypescript,
+      {
+        webpack: tsIncludes,
+      },
+    ],
     [
       withCSS,
       {
@@ -15,14 +20,6 @@ module.exports = withPlugins(
     ],
   ],
   {
-    webpack(config, options) {
-      // Do not run type checking twice:
-      if (options.isServer) {
-        config.plugins.push(new ForkTsCheckerWebpackPlugin())
-      }
-
-      return config
-    },
     distDir: '../dist/front',
   },
 )
