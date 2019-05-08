@@ -9,7 +9,6 @@
   "license": "MIT",
   "scripts": {
     "build": "rimraf ./dist && cd back && yarn prestart:back:prod && cd ../front && yarn prestart:front:prod",
-    "lint": "yarn s lint && cd front && yarn lint:style",
     "types": "tcm front && tsc --noEmit -p front && tsc --noEmit -p back",
     "s": "yarn soda"
   },
@@ -17,7 +16,7 @@
     "tsconfig-paths": "^3.7.0"
   },
   "devDependencies": {
-    "@solid-soda/scripts": "^1.7.1",
+    "@solid-soda/scripts": "^1.8.0",
     "pm2": "^3.2.4",
     "rimraf": "^2.6.2",
     "ts-node": "^7.0.1",
